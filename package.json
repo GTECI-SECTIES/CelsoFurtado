@@ -1,0 +1,89 @@
+{
+    "name": "template-base",
+    "description": "Template padrão",
+    "version": "1.0.0",
+    "author": {
+      "name": "Joyce Vicente",
+      "email": "gteci@secties.pb.gov.br"
+    },
+    "config": {
+      "posts_per_page": 5,
+      "custom": {
+        
+        "header_color": {
+        "type": "color",
+        "default": "#ffffff"
+      },
+      "nav_alignment": {
+        "type": "select",
+        "options": ["left", "center", "right"],
+        "default": "center"
+      },
+        "hero_logo": {
+        "type": "image",
+        "label": "Logo Fapesq"
+
+      },
+
+      "hero_logo_position": {
+        "type": "select",
+        "options": ["center", "left", "hidden", "nav"],
+        "default": "center"
+      },
+
+      
+       "hero_section": {
+        "type": "boolean",
+        "default": true,
+        "label": "Mostrar sessão hero"
+
+      },
+
+      "about_layout": {
+      "type": "select",
+      "options": ["image-left", "image-right"],
+      "default": "image-right"
+      },
+
+      "about_title": {
+        "type": "text",
+        "default": "Sobre o Projeto"
+      },
+
+      "about_image_style": {
+        "type": "select",
+        "options": ["full", "contained"],
+        "default": "full"
+      },
+      "about_image_radius": {
+        "type": "select",
+        "options": ["none", "medium"],
+        "default": "none"
+      },
+      "about_image_alignment": {
+        "type": "select",
+        "options": ["left", "center", "right"],
+        "default": "center"
+      },
+      "about_description": {
+        "type": "text",
+        "default": "Aqui vai o texto explicando o projeto, evento ou empresa."
+      },
+      "about_image": {
+        "type": "image"
+      },
+
+       "location_map": {
+        "type": "text",
+        "default": ""
+      },
+
+      "location_layout": {
+      "type": "select",
+      "options": ["media-left", "media-right"],
+      "default": "media-left"
+     }
+      
+    }
+  }
+}

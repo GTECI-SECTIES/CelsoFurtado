@@ -1,0 +1,64 @@
+<footer class="footer">
+  <div class="container footer__grid">
+
+    {{! COLUNA 1 }}
+    {{#get "pages" filter="slug:patrocinio" limit="1"}}
+      {{#foreach pages}}
+        {{#if html}}
+          <div class="footer__col">
+            <h3>{{title}}</h3>
+            <div class="footer__logos">
+              {{{html}}}
+            </div>
+          </div>
+        {{/if}}
+      {{/foreach}}
+    {{/get}}
+
+    {{! COLUNA 2 }}
+    {{#get "pages" filter="slug:apoio" limit="1"}}
+      {{#foreach pages}}
+        {{#if html}}
+          <div class="footer__col">
+            <h3>{{title}}</h3>
+            <div class="footer__logos">
+              {{{html}}}
+            </div>
+          </div>
+        {{/if}}
+      {{/foreach}}
+    {{/get}}
+
+    {{! COLUNA 3 }}
+    {{#get "pages" filter="slug:parceiros" limit="1"}}
+      {{#foreach pages}}
+        {{#if html}}
+          <div class="footer__col">
+            <h3>{{title}}</h3>
+            <div class="footer__logos">
+              {{{html}}}
+            </div>
+          </div>
+        {{/if}}
+      {{/foreach}}
+    {{/get}}
+
+    {{! CONTATOS }}
+    <div class="footer__col">
+      <h3>Contatos</h3>
+      <div class="footer__icons" id="social-icons"></div>
+    </div>
+
+    {{! ENDEREÇO }}
+    <div class="footer__col">
+      <p><b>
+          SECRETARIA DE ESTADO DA CIÊNCIA, TECNOLOGIA, INOVAÇÃO E ENSINO
+          SUPERIOR DA PARAÍBA
+        </b></p>
+
+      <p>AV. JOÃO DA MATA, 200 - JAGUARIBE</p>
+      <p>JOÃO PESSOA - PB, CEP: 58015-020</p>
+    </div>
+
+  </div>
+</footer>

@@ -1,0 +1,17 @@
+<ul class="nav__list">
+
+  {{#foreach navigation}}
+    <li>
+      <a href="{{url}}" {{#if current}}class="nav-current"{{/if}}>
+        {{label}}
+      </a>
+    </li>
+  {{/foreach}}
+
+  <li class="nav__portal">
+    <a href="https://paraiba.pb.gov.br/diretas/secretaria-da-ciencia-tecnologia-inovacao-e-ensino-superior">
+      Portal
+    </a>
+  </li>
+
+</ul>
