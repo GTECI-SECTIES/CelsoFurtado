@@ -1,0 +1,145 @@
+<section class="participation">
+
+  <div class="container">
+
+    <div class="participation__header">
+      <h2>Como Participar?</h2>
+      <span class="participation__divider section-divider"></span>
+
+      <p class="participation__intro">
+        O Programa Celso Furtado atua em diferentes níveis de formação e
+        desenvolvimento educacional. Escolha seu perfil para acessar orientações
+        específicas.
+      </p>
+    </div>
+
+    <div class="participation__students">
+
+      <h3 class="participation__subtitle">
+        Estudantes
+      </h3>
+
+      <p class="participation__description">
+        Educação Básica • Educação em Prisões • Graduação • Pós-graduação
+      </p>
+
+      <div class="participation__grid">
+
+        {{#get "pages" filter="slug:ensino-fundamental" limit="1"}}
+          {{#foreach pages}}
+
+            <a
+              href="{{url}}"
+              class="participation__card participation__card--yellow"
+            >
+
+              <div class="participation__icon">
+                <img src="{{asset 'images/contrato.png'}}" alt="{{title}}" />
+              </div>
+
+              <h4>{{title}}</h4>
+
+              <span class="participation__link">
+                Ver orientações →
+              </span>
+
+            </a>
+
+          {{/foreach}}
+        {{/get}}
+
+        {{#get "pages" filter="slug:ensino-medio" limit="1"}}
+          {{#foreach pages}}
+
+            <a
+              href="{{url}}"
+              class="participation__card participation__card--red"
+            >
+
+              <div class="participation__icon">
+                <img src="{{asset 'images/tarefa.png'}}" alt="{{title}}" />
+              </div>
+
+              <h4>{{title}}</h4>
+
+              <span class="participation__link">
+                Ver orientações →
+              </span>
+
+            </a>
+
+          {{/foreach}}
+        {{/get}}
+
+        {{#get "pages" filter="slug:ensino-superior" limit="1"}}
+          {{#foreach pages}}
+
+            <a
+              href="{{url}}"
+              class="participation__card participation__card--blue"
+            >
+
+              <div class="participation__icon">
+                <img src="{{asset 'images/link.png'}}" alt="{{title}}" />
+              </div>
+
+              <h4>{{title}}</h4>
+
+              <span class="participation__link">
+                Ver orientações →
+              </span>
+
+            </a>
+
+          {{/foreach}}
+        {{/get}}
+
+      </div>
+
+    </div>
+
+    <div class="participation__partners">
+
+      <h3 class="participation__subtitle">
+        Parceiros
+      </h3>
+
+      <p class="participation__description">
+        Espaço voltado para instituições, organizações e empresas interessadas
+        em colaborar com o programa.
+      </p>
+
+      {{#get "pages" filter="slug:parceiros" limit="1"}}
+        {{#foreach pages}}
+
+          <div class="participation__partner-card">
+
+            <div class="participation__icon">
+              <img src="{{asset 'images/check.png'}}" alt="{{title}}" />
+            </div>
+
+            <div class="participation__partner-content">
+
+              <h4>{{title}}</h4>
+
+              <p>
+                Conheça as formas de colaboração institucional e manifeste seu
+                interesse em participar.
+              </p>
+
+              <a href="{{url}}" class="btn btn--primary">
+                Manifestar interesse
+              </a>
+
+            </div>
+
+          </div>
+
+        {{/foreach}}
+      {{/get}}
+
+    </div>
+
+  </div>
+
+</section>

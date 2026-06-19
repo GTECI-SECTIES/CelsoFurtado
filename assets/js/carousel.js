@@ -1,23 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".teams__group").forEach((group) => {
-    const members = group.querySelector(".teams__members");
-    const next = group.querySelector(".teams__next");
-    const prev = group.querySelector(".teams__prev");
+  const wrapper = document.querySelector(".testimonials__wrapper");
+  const next = document.querySelector(".testimonials__next");
+  const prev = document.querySelector(".testimonials__prev");
 
-    const scrollAmount = 250;
+  if (!wrapper) return;
 
-    next.addEventListener("click", () => {
-      members.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
+  next.addEventListener("click", () => {
+    wrapper.scrollBy({
+      left: 380,
+      behavior: "smooth",
     });
+  });
 
-    prev.addEventListener("click", () => {
-      members.scrollBy({
-        left: -scrollAmount,
-        behavior: "smooth",
-      });
+  prev.addEventListener("click", () => {
+    wrapper.scrollBy({
+      left: -380,
+      behavior: "smooth",
     });
   });
 });

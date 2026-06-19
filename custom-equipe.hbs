@@ -1,0 +1,35 @@
+<section class="team-page">
+
+  <div class="container">
+
+    <h2>Comissão do Programa</h2>
+
+    <div class="team-grid">
+
+      {{#get "posts" filter="tag:equipe" limit="all"}}
+
+        {{#foreach posts}}
+
+          <article class="team-card">
+
+            <img src="{{feature_image}}" alt="{{title}}" />
+
+            <h3>{{title}}</h3>
+
+            <span>{{excerpt}}</span>
+
+            <div class="team-card__bio">
+              {{content}}
+            </div>
+
+          </article>
+
+        {{/foreach}}
+
+      {{/get}}
+
+    </div>
+
+  </div>
+
+</section>
